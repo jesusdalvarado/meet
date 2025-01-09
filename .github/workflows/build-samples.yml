@@ -3,8 +3,6 @@ name: Build sample Add-ons
 on:
   # Runs on all PRs, or when called from another workflow.
   push:
-    branches: ['main']
-
   workflow_call:
 
 jobs:
@@ -23,16 +21,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
           cache-dependency-path: addons-web-sdk/samples/package-lock.json
-
-      - run: npm install
-        working-directory: addons-web-sdk/samples/hello-world
-
       - run: npm run build
-        working-directory: addons-web-sdk/samples/hello-world
-
+        working-directory: addons-web-sdk/samples
       - name: Upload build
         uses: actions/upload-artifact@v4
         with:
           name: page
-          path: addons-web-sdk/samples/dist/hello-world
+          path: addons-web-sdk/samples/dist
           if-no-files-found: error
