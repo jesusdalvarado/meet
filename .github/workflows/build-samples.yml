@@ -3,6 +3,8 @@ name: Build sample Add-ons
 on:
   # Runs on all PRs, or when called from another workflow.
   push:
+    branches: ['main']
+
   workflow_call:
 
 jobs:
@@ -17,12 +19,17 @@ jobs:
       - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
-        # with:
-        #   node-version: ${{ matrix.node-version }}
-        #   cache: 'npm'
-        #   cache-dependency-path: addons-web-sdk/samples/package-lock.json
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: addons-web-sdk/samples/package-lock.json
+
+      - run: npm install
+        working-directory: addons-web-sdk/samples/hello-world
+
       - run: npm run build
         working-directory: addons-web-sdk/samples/hello-world
+
       - name: Upload build
         uses: actions/upload-artifact@v4
         with:
