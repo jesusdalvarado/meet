@@ -17,15 +17,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: addons-web-sdk/samples/package-lock.json
+        # with:
+        #   node-version: ${{ matrix.node-version }}
+        #   cache: 'npm'
+        #   cache-dependency-path: addons-web-sdk/samples/package-lock.json
       - run: npm run build
-        working-directory: addons-web-sdk/samples
+        working-directory: addons-web-sdk/samples/hello-world
       - name: Upload build
         uses: actions/upload-artifact@v4
         with:
           name: page
-          path: addons-web-sdk/samples/dist
+          path: addons-web-sdk/samples/dist/hello-world
           if-no-files-found: error
