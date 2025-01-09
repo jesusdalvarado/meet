@@ -71,7 +71,7 @@ module.exports = {
   output: {
     library: 'helloWorld', // Name of the global variable for the library
     path: path.resolve(__dirname, '../dist/hello-world'), // Output directory
-    filename: 'bundle.js', // Output file name
+    // filename: 'bundle.js', // Output file name
   },
   resolve: {
     fallback: {
