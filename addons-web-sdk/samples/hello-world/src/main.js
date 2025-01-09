@@ -16,7 +16,7 @@ import { meet } from '@googleworkspace/meet-addons/meet.addons';
 
 const CLOUD_PROJECT_NUMBER = '127425301460';
 const MAIN_STAGE_URL =
-  'https://googleworkspace.github.io/meet/hello-world/MainStage.html';
+  'https://jesusdalvarado.github.io/meet/addons-web-sdk/samples/dist/hello-world/MainStage.html';
 
 /**
  * Prepares the Add-on Side Panel Client, and adds an event to launch the
