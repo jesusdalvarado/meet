@@ -14,7 +14,8 @@ export default defineConfig({
         }),
       ],
       input: {
-        main: './index.html' // Adjust to your project's HTML entry point
+        index: './index.html', // Entry point for index.html
+        mainStage: './src/MainStage.html', // Entry point for MainStage.html
       },
     },
     outDir: '../dist/hello-world', // Matches the current output directory structure
