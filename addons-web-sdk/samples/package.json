@@ -12,5 +12,8 @@
     "animation-next-js",
     "hello-world",
     "hello-world-next-js"
-  ]
+  ],
+  "dependencies": {
+    "vite": "^6.0.7"
+  }
 }

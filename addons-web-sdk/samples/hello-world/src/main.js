@@ -45,6 +45,11 @@ export async function initializeMainStage() {
   await session.createMainStageClient();
 }
 
+// Expose `setUpAddon` globally
+window.helloWorld = {
+  setUpAddon,
+};
+
 
 
 
