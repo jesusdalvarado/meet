@@ -50,10 +50,6 @@ export async function initializeMainStage() {
 
 
 
-
-
-
-
 // // Import required libraries
 // import { meet } from '@googleworkspace/meet-addons/meet.addons';
 // // import { ConferenceRecordsServiceClient } from '@google-apps/meet/v2';
