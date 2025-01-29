@@ -27,3 +27,26 @@ https://jesusdalvarado.github.io/meet/addons-web-sdk/samples/dist/hello-world/in
 https://jesusdalvarado.github.io/meet/addons-web-sdk/samples/dist/hello-world/MainStage.html
 
 For more information about the deploy process check the files in meet/.github/workflows
+
+
+Additional information:
+This is an example manifest file for a test deploy.
+
+
+{
+  "addOns": {
+    "common": {
+      "name": "Infinite Possibilities",
+      "logoUrl": "https://infinitepossibilities.ai/wp-content/uploads/2024/10/Logo.svg"
+    },
+    "meet": {
+      "web": {
+        "supportsScreenSharing": true,
+        "logoUrl": "https://infinitepossibilities.ai/wp-content/uploads/2024/10/Logo.svg",
+        "addOnOrigins": ["https://meet.google.com", "https://infinitepossibilities.ai", "https://jesusdalvarado.github.io"],
+        "sidePanelUrl": "https://jesusdalvarado.github.io/meet/addons-web-sdk/samples/dist/hello-world/index.html",
+        "darkModeLogoUrl": "https://infinitepossibilities.ai/wp-content/uploads/2024/10/Logo.svg"
+      }
+    }
+  }
+}
